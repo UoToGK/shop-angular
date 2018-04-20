@@ -1,0 +1,18 @@
+.my-container{
+      width: 99%;
+      line-height: 10px;
+      box-sizing: border-box;
+}
+.my-row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+.my-input{
+        margin: 15px auto;
+}
+.my-input-button button{
+        margin-left: 10px
+}

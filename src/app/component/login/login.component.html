@@ -1,4 +1,27 @@
-<p>
-  login works!
-</p>
-<button class="btn btn-success">SUCCESS</button>
+<h1>Welcome to Angular World</h1>
+<ng-template #tpl>
+  <span>I am span in template</span>
+</ng-template>
+<div class="my-container">
+  <form>
+    <div class="my-row">
+      <div class="my-input">
+            <input type="text" autofocus name="username"[(ngModel)]="username" class="form-control">
+      </div>
+      <div class="my-input">
+        <input type="password" name="password" id="password" class="form-control"#myInput>
+      </div>
+      <div class="my-input-button">
+        <button type="submit" class="btn btn-outline-primary " routerLink="/app">注册</button>
+        <button type="submit" class="btn btn-primary " (click)="login()">登陆</button>
+      </div>
+    </div>
+    <div class="my-row">
+      <button routerLink="hostlistener" class="btn">hostlistener</button>
+      <button routerLink="templateRef" class="btn btn-success">templateRef</button>
+      <button routerLink="viewchild" class="btn btn-danger">viewchild</button>
+      <button routerLink="sub" class="btn btn-outline-info">sub</button>
+      <button routerLink="updateview" class="btn btn-outline-warning">updateview</button>
+    </div>
+  </form>
+</div>

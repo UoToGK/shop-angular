@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from '../component/login/login.component';
-import { HomeComponent } from '../component/home/home.component';
 import { PageNotFoundComponent } from '../component/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
-    path: 'index',
-    component: LoginComponent
+    path: "index",
+    loadChildren: "../component/login/login.module#LoginModule"
   },
   {
-    path: 'home',
-    component: HomeComponent
+    path: "",
+    redirectTo: "/index",
+    pathMatch: "full"
   },
+
   {
-    path: '',
-    redirectTo: '/index',
-    pathMatch: 'full'
+    path: "app",//注册模块
+    loadChildren: "../module/system/home/main.module#MainModule"
   },
+
   {
-    path: '**',
+    path: "**",
     component: PageNotFoundComponent
   }
 ];

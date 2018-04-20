@@ -1,0 +1,19 @@
+<p exeHighlight>
+  hostlistener works!
+</p>
+<!-- 1.宿主元素属性和事件绑定风格指南 优先使用 @HostListener 和 @HostBinding ，
+  而不是 @Directive 和 @Component 装饰器的 host 属性： 对于关联到 @HostBinding 的属性或关联到
+@HostListener 的方法，要修改时，只需在指令类中的一个地方修改。 如果使用元数据属性 host，
+你就得在组件类中修改属性声明的同时修改相关的元数据。 -->
+
+<button counting class="btn" exeButtonPress>增加点击次数</button>
+<div>
+  <!-- 
+     说明页面中
+    <template> 模板元素中的内容，如果没有进行处理对用户来说是不可见的。Angular 2 中，
+      <template> 模板元素主要应用在结构指令=====TemplateRef
+   -->
+<template id="tpl">
+  <span>I am span in template</span>
+</template>
+</div>

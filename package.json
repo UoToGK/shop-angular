@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.js",
+    "start": "ng serve  -open",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,7 +13,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^5.2.0",
+    "@angular/animations": "^5.2.9",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
     "@angular/core": "^5.2.0",
@@ -26,6 +26,8 @@
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "lodash": "^4.17.5",
+    "primeng": "^5.2.3",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
