@@ -1,0 +1,66 @@
+  <header>
+    <a href="void:0;" class="logo"></a>
+    <div class="desc">欢迎注册</div>
+  </header>
+  <section>
+    <form #register="ngForm">
+      <div class="register-box">
+            <label for="username" class="username_label">用 户 名
+        <input maxlength="20" type="text" name="userName"placeholder="您的用户名和登录名"[(ngModel)]="user.userName">
+            </label>
+        <div class="tips">
+              
+            </div>
+      </div>
+      <div class="register-box">
+        <label for="username" class="other_label">设 置 密 码
+        <input maxlength="20" type="password"name="password" placeholder="建议至少使用两种字符组合"[(ngModel)]="user.password">
+        </label>
+        <div class="tips">
+          
+        </div>
+      </div>
+      <div class="register-box">
+        <label for="username" class="other_label">确 认 密 码
+        <input maxlength="20" type="password" name="confirmpassword" placeholder="请再次输入密码"[(ngModel)]="user.confirmpassword">
+        </label>
+        <div class="tips">
+          
+        </div>
+      </div>
+      <div class="register-box">
+        <label for="username" class="other_label">
+        <span>中国 0086∨</span>
+        <input class="phone" maxlength="20" type="text" name="tel" placeholder="建议使用常用手机"[(ngModel)]="user.tel">
+        </label>
+        <div class="tips">
+          
+        </div>
+      </div>
+      <div class="register-box">
+        <label for="username" class="other_label">验 证 码
+        <input maxlength="20" type="text" placeholder="请输入验证码">
+        </label>
+        <span id="code"></span>
+        <div class="tips">
+          
+        </div>
+      </div>
+      <div class="arguement">
+            <input type="checkbox" id="xieyi">
+        阅读并同意
+        <a href="#">《京东用户注册协议》</a>
+        <a href="#">《隐私政策》</a>
+        <div class="tips">
+          
+        </div>
+          </div>
+      <div class="submit_btn">
+            <button type="submit" id="submit_btn">立 即 注 册</button>
+          </div>
+    </form>
+  </section>
+  
+
+  
+

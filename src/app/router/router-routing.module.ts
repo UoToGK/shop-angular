@@ -14,8 +14,12 @@ const routes: Routes = [
   },
 
   {
-    path: "app",//注册模块
+    path: "app",
     loadChildren: "../module/system/home/main.module#MainModule"
+  },
+  {
+    path: "register",//注册模块
+    loadChildren: "../module/register/register.module#RegisterModule"
   },
 
   {

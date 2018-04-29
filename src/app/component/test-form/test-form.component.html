@@ -1,0 +1,24 @@
+<form #concatForm = "ngForm">
+    <fieldset ngModelGroup="nameGroup" #nameGroup="ngModelGroup">
+        <label>姓:</label>
+        <input type="text" name="firstname" [(ngModel)]="curContact.firstname" #firstname  
+               required> 
+          <label>名字:</label>
+        <input type="text" name="lastname" [(ngModel)]="curContact.lastname"     
+               required>
+    </fieldset>
+    <fieldset ngModelGroup="addressGroup" #addressGroup ="ngModelGroup">
+        <label>街:</label>
+        <input type="text" name="street" [(ngModel)]="curContact.street" required>             <label>区:</label>
+        <input type="text" name="zip" [(ngModel)]="curContact.zip" required> 
+        <label>城市:</label>
+        <input type="text" name="city" [(ngModel)]="curContact.city" required>
+    </fieldset>
+</form>
+<div>
+  第二部分
+  <form novalidate [formGroup]="myGroup">
+      Name: <input type="text" formControlName="name">
+      Location: <input type="text" formControlName="location">
+    </form>
+</div>

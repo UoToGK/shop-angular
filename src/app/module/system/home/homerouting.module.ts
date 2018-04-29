@@ -1,22 +1,21 @@
-import { NgModule, OnInit } from '@angular/core';
-import { RouterModule, Routes, Router } from '@angular/router';
+import { NgModule, OnInit } from "@angular/core";
+import { RouterModule, Routes, Router } from "@angular/router";
 
-import { HomeComponent } from './home.component';
+import { HomeComponent } from "./home.component";
 
 /**
  * 主页路由
  */
 const homeRoutes: Routes = [
-        { path: '', component: HomeComponent }
-]
-
+  { path: "", component: HomeComponent },
+  {
+    path: "form",
+    loadChildren: "../../test-form/test-form.module#TestFormModule"
+  }
+];
 
 @NgModule({
-        imports: [
-                RouterModule.forChild(homeRoutes)
-        ],
-        exports: [
-                RouterModule
-        ]
+  imports: [RouterModule.forChild(homeRoutes)],
+  exports: [RouterModule]
 })
-export class HomeRoutingModule { }
+export class HomeRoutingModule {}
