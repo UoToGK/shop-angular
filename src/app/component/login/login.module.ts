@@ -12,6 +12,7 @@ import { SubscribeComponent, NgOnChangeComponent } from '../subscribe/subscribe.
 import { UpdateviewComponent, ViewSonComponent } from '../updateview/updateview.component';
 import { DialogComponent } from '../dialog/dialog.component';
 import { InputRadioComponent } from '../input-radio/input-radio.component';
+import { SwiperTableComponent } from '../swiper-table/swiper-table.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, LoginRoutingModule],
@@ -31,7 +32,8 @@ import { InputRadioComponent } from '../input-radio/input-radio.component';
     UpdateviewComponent,
     ViewSonComponent,
     DialogComponent,
-    InputRadioComponent
+    InputRadioComponent,
+    SwiperTableComponent
   ]
 })
 export class LoginModule {}

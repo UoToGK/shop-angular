@@ -1,0 +1,57 @@
+<div>
+    <!-- table header 头部 -->
+    <div class="bf-swiper-table  bf-table-header clearfix">
+        <div *ngFor="let col of setting.columns" [ngStyle]="{'width': col.width}"><span class="bf-table-font">{{col.headerTitle}}</span></div>
+    </div>
+    <!-- table header END-->
+    
+    <!-- table body 内容-->
+    <div class="bf-table-box {{item.showMobileAction?'bf-show-action':''}}"   
+        *ngFor="let item of data"
+        (click)="rowClick(item);setting.events?.rowClick?setting.events.rowClick(item):''"
+        (dblclick)="rowDoubleClick(item);setting.events?.rowDoubleClick?setting.events.rowDoubleClick(item):''"
+        >
+        <!-- 移动端操作按钮 -->
+        <div *ngIf="setting.needSwipe" class="bf-table-action bf-mobile-table-action clearfix"  [style.width.px]="mobileActionBoxWidth">
+            <div *ngFor="let mobildAction of setting.mobileActionGroup" [hidden]="mobildAction.isShowAction?mobildAction.isShowAction(item):''" (click)="mobildAction.mobileActionEvent?mobildAction.mobileActionEvent(item):''">
+                <i [class]="mobildAction.icon" [ngStyle]="mobildAction.style"></i>
+            </div>
+        </div>
+        <!-- 移动端操作按钮 END-->
+
+        <div
+            class="{{(item.swiperState =='expense'?'bf-swiper-expense':'bf-swiper-collapse') + (item.swiperState =='touching'?' bf-swiper-touching':'') +  (item.activite?' bf-wiper-row-activite':' bf-swiper-row-default') + ' bf-swiper-table  bf-table-body clearfix '}}"
+            (touchmove)="touchmoveTable($event,item)" 
+            (touchstart)="touchstartTable($event,item)"
+            (touchend)="touchendTable($event,item)"  
+            [style.transform]="'translateX('+item.moveX+'px)'"
+            
+            >
+
+            <div *ngFor="let col of setting.columns" 
+                class="bf-hidden-more-text" 
+                title="{{item[col.field]}}"  
+                [ngStyle]="{'width': col.width}" 
+                [ngClass]="col.isShowMobile?'bf-hidden-col':''"
+                (click)="cellclick(item[col.field],item,col);setting.events?.click?setting.events.click(item[col.field]):''"
+                (dblclick)="cellclickdblclick(item[col.field],item);setting.events?.doubleClick?setting.events.doubleClick(item[col.field]):''"
+                >
+                <!-- {{col.editable?'1':'0'}} -->
+                <!-- <div> -->
+                    <span class="bf-mobile-title">{{col.headerTitle}}:</span>
+                    <span class="bf-table-col-content"  [hidden]="item.swiperEdit && col.editable" [ngStyle]="col.customStyle?col.customStyle(item):''">{{col.customText?col.customText(item):item[col.field]}}</span>
+                    <input (click)="$event.stopPropagation()" (focus)="editInputFocus(item,$event)" (blur)="editInputBlur(item)" [readonly]="col.editDisabled?(col.editDisabled(item)?'readonly':''):''" [hidden]="!(item.swiperEdit && col.editable)" type="text" [(ngModel)]="item.swiperEditData && item.swiperEditData[col.field]"/>
+                <!-- </div> editDisabled-->
+            </div>
+            
+            <!-- table action PC端操作按钮 -->
+            <div class="bf-table-action clearfix" *ngIf="setting.needSwipe">
+                <div *ngFor="let pcAction of setting.pcActionGroup" [hidden]="pcAction.isShowAction?pcAction.isShowAction(item):''" class="bf-hidden-More-Text" (click)="pcAction.pcActionEvent?pcAction.pcActionEvent(item):''">{{pcAction.title}}</div>
+            </div>
+            <!-- table action PC端操作按钮 END-->
+            
+        </div>
+        <div class="bf-gray-gap"></div>
+    </div>
+    <!-- table body 内容 END-->
+</div> 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input-radio',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input-radio.component.css']
 })
 export class InputRadioComponent implements OnInit {
-on:boolean=false;
+@Input() on:boolean=false;//开关
   constructor() { }
 
   ngOnInit() {

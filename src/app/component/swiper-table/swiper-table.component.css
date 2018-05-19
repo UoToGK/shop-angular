@@ -1,0 +1,303 @@
+
+
+/* $resXXL: 1200px; // Extra large devices (large desktops, 1200px and up)
+$resL: 992px; // Large devices (desktops, 992px and up)
+$resM: 768px; // Medium devices (tablets, 768px and up)
+$resXS: 576px; // Small devices (landscape phones, 576px and up) */
+.bf-swiper-table{
+    background: #fff;
+}
+.bf-swiper-table>div{
+    float: left;
+    text-align: left;
+    /* width: 15%; */
+    font-size: 12px;
+}
+.bf-mobile-title{
+    display: none;
+}
+
+.bf-table-font{
+    font-size: 14px;
+    color:#555555;
+}
+
+.bf-table-header{
+    background: linear-gradient(to bottom, #f5f7f9 0%,#eceef1 100%);
+    padding: 6px 4px;
+    color: black;
+}
+.bf-table-body{
+    border-bottom: 1px solid #e8e8e8;
+    position: relative;
+    /* padding: 5px 6px; */
+
+}
+
+.bf-table-body .bf-hidden-more-text{
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+    /* padding: 5px 0; */
+    /* height: initial; */
+    /* padding: 0 4px; */
+    min-height: 1px;
+}
+
+/*.bf-hidden-more-Text:hover{
+    overflow: visible;
+}*/
+
+.bf-font-hidden{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bf-table-body>div{
+    height: 28px;
+    line-height: 28px;
+}
+.bf-table-body>.bf-table-action{
+    position: absolute;
+    height: 100%;
+    line-height: 28px;
+    right: 0;
+    bottom: 0;
+    color: #0099ff;
+    /* background-color: rgba(251,251,251,0.9); */
+    background: linear-gradient(to right, rgba(251,251,251,0.4) 0%,rgba(251,251,251,0.9) 10%, rgba(251,251,251,0.9) 90%, rgba(251,251,251,0.4) 100%);
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+}
+.bf-table-body>.bf-table-action>div{
+    float: left;
+    padding-left: 8px;
+}
+.bf-table-body>.bf-table-action>div:hover{
+    color: #0075c2;
+}
+.bf-table-body>.bf-table-action>div:hover{
+    cursor: pointer;
+}
+.bf-table-body:hover>.bf-table-action{
+    display: flex;
+}
+
+
+.bf-table-body:hover{
+    background-color: #eee; 
+}
+@media screen and (max-width: 576px){
+    .bf-table-header{
+        display: none;
+    }
+    .bf-swiper-table>div{
+        width: 100% !important;
+        text-align: left;
+    }
+
+    .bf-font-hidden{
+        display: block
+    }
+
+    .bf-table-body .bf-mobile-title{
+        display: block;
+        float: left;
+        width: 50%;
+        font-size: 14px;
+        color:#555555;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+    }
+    .bf-table-body:hover>.bf-table-action{
+        display: none;
+    }
+    .bf-swiper-touching{
+        border-right: 1px solid #eee;
+    }
+}
+
+/* 移动端操作按钮样式 */
+.bf-table-box{
+    position: relative;
+    padding: 0 4px;
+}
+.bf-table-action{
+    display: none;
+}
+@media screen and (max-width: 576px){
+    .bf-table-box{
+        padding: 0;
+    }
+    .bf-table-action{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        /* left: 0; */
+        background-color: #fff;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    .bf-show-action .bf-swiper-table{
+        transform: translate3d(-15px, 0px, 0px);
+    }
+    .bf-table-action{
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .bf-mobile-table-action{
+        font-size: 18px;
+    }
+    .bf-mobile-table-action>div{
+        padding: 15px; 
+        border-radius: 50px;
+        background: rgba(204,204,204,0.2);
+        margin-right: 20px;
+    }
+    .bf-mobile-table-action>div>i{
+        float: left;
+    }
+    .bf-mobile-table-action .fa-list{
+        color: #0099ff;
+    }
+    .bf-mobile-table-action .fa-pencil-square-o{
+        color: #08ca59;
+    }
+    .bf-mobile-table-action .fa-trash-o{
+        color: #fa6562;
+    }
+    .bf-mobile-table-action .fa-exclamation-triangle{
+        color: #fa6562;
+    }
+
+    .bf-mobile-table-action .fa-pencil{
+        color: #08ca59;
+    }
+
+    .bf-mobile-table-action .fa-wrench{
+        color: #0099ff;
+    }
+
+    .bf-mobile-table-action .fa-refresh{
+        color: #0099ff;
+    }
+
+    .bf-mobile-table-action .fa-mail-forward{
+        color: #FA6562;
+    }
+
+    .bf-hidden-more-text{
+        padding: 0 4px;
+    }
+}
+@media screen and (min-width: 576px){
+    .bf-show-action .bf-swiper-table{
+        transform: translate3d(0px, 0px, 0px) !important;
+    }
+}
+
+
+
+
+/* 移动端操作按钮样式 */
+
+/* 移动端灰色间隙*/
+.bf-no-gap{
+    position: relative;
+    
+}
+.bf-gray-gap{
+    display: none;
+   
+}
+@media screen and (max-width: 576px){
+    .bf-gray-gap{
+        display: block;
+        height: 8px;
+        background-color: #F0F3F4;
+        position: relative;
+    } 
+    .bf-no-gap{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: scroll;
+    }
+    .bf-no-gap::-webkit-scrollbar {
+        display: none;
+    }
+    .bf-swiper-expense{
+        border-right: 6px solid #F0F3F4;
+    }
+    .bf-hidden-col{
+        display: none;
+    }
+}
+/* 移动端灰色间隙 END*/
+
+
+/* 添加选中状态样式*/
+.bf-wiper-row-activite{
+    background: #d6efff;
+}
+.bf-wiper-row-activite:hover{
+    background: #d6efff;
+}
+
+.bf-wiper-row-activite >.bf-table-action{
+    /* background-color: rgba(251,251,251,0.9); */
+    background: linear-gradient(to right, rgba(214, 239, 255,0.4) 0%,rgba(214, 239, 255,0.9) 10%, rgba(214, 239, 255,0.9) 90%, rgba(214, 239, 255,0.4) 100%);
+}
+/* 添加选中状态样式 END*/
+
+
+/* 列表编辑样式*/
+.bf-hidden-more-text>input{
+    width: 98%;
+    height: 100%;
+}
+@media screen and (max-width: 576px){
+    .bf-hidden-more-text>input{
+        width: 50%;
+        height: 90%;
+    }
+}
+
+/* 列表编辑样式 END*/
+
+/* 修复ie11 中，元素使用title属性内容过长时，title内容默认省略号（修复：需要展示全部的title内容）*/
+.bf-table-col-content{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+}
+@media screen and (max-width: 576px){
+
+    .bf-table-body .bf-table-col-content{
+        width: 50%;
+    }
+}
+
+/* 修复ie11 中，元素使用title属性内容过长时，title内容默认省略号（修复：需要展示全部的title内容）END*/
+
+.bf-table-box:nth-child(odd) .bf-table-body{
+    background: #fafafb ;
+}
+.bf-table-box:nth-child(odd) .bf-wiper-row-activite{
+    background: #d6efff;
+}
+.bf-table-box:nth-child(odd) .bf-table-body:hover{
+    background: #eee;
+}
