@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css']
+  styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
   //提示信息
@@ -14,6 +14,18 @@ export class DialogComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $('.button').mousemove(e=>{
+      console.log('jj')
+      const x = e.pageX - e.target.offsetLeft
+  
+    const y = e.pageY - e.target.offsetTop
+  
+   
+  
+    e.target.style.setProperty('--x', `${ x }px`)
+  
+    e.target.style.setProperty('--y', `${ y }px`)
+    })
   }
 private cancel(){
   //执行取消逻辑
@@ -22,5 +34,12 @@ private cancel(){
 private success(){
 //执行确定逻辑
 
+}
+ngAfterViewInit() {
+  //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+  //Add 'implements AfterViewInit' to the class.
+ 
+
+  
 }
 }

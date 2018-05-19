@@ -11,6 +11,7 @@ import { ParentComponent, ChildComponent } from '../viewchild/viewchild.componen
 import { SubscribeComponent, NgOnChangeComponent } from '../subscribe/subscribe.component';
 import { UpdateviewComponent, ViewSonComponent } from '../updateview/updateview.component';
 import { DialogComponent } from '../dialog/dialog.component';
+import { InputRadioComponent } from '../input-radio/input-radio.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, LoginRoutingModule],
@@ -29,7 +30,8 @@ import { DialogComponent } from '../dialog/dialog.component';
     NgOnChangeComponent,
     UpdateviewComponent,
     ViewSonComponent,
-    DialogComponent
+    DialogComponent,
+    InputRadioComponent
   ]
 })
 export class LoginModule {}

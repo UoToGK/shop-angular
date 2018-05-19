@@ -10,8 +10,9 @@
         <span>{{msg}}</span>
     </div>
     <div class="dialog-action-two clearfix" >
-        <div class="mobile-dialog-two-cancel" (click)="cancel();msg = false">{{cancelText}}</div>
-        <div class="mobile-dialog-two-sure" (click)="success();msg = false">{{successText}}</div>
+        <div class="mobile-dialog-two-cancel .button" (click)="cancel();msg = false"><span>{{cancelText}}</span></div>
+        <div class="mobile-dialog-two-sure " (click)="success();msg = false"><span>{{successText}}</span></div>
     </div>
 </div>
+
 <!-- END操作成功 -->

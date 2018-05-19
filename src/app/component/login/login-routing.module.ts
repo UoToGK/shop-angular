@@ -7,6 +7,7 @@ import { ViewchildComponent } from '../viewchild/viewchild.component';
 import { SubscribeComponent } from '../subscribe/subscribe.component';
 import { UpdateviewComponent } from '../updateview/updateview.component';
 import { DialogComponent } from '../dialog/dialog.component';
+import { InputRadioComponent } from '../input-radio/input-radio.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: "dialog",
     component: DialogComponent
+  },
+  {
+    path: "radio",
+    component: InputRadioComponent
   }
 ];
 
