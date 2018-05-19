@@ -6,6 +6,7 @@ import { TemplateComponent } from '../template/template.component';
 import { ViewchildComponent } from '../viewchild/viewchild.component';
 import { SubscribeComponent } from '../subscribe/subscribe.component';
 import { UpdateviewComponent } from '../updateview/updateview.component';
+import { DialogComponent } from '../dialog/dialog.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: "updateview",
     component: UpdateviewComponent
+  },
+  {
+    path: "dialog",
+    component: DialogComponent
   }
 ];
 

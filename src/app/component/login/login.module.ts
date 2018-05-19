@@ -10,6 +10,7 @@ import { ViewchildComponent, SonComponent } from '../viewchild/viewchild.compone
 import { ParentComponent, ChildComponent } from '../viewchild/viewchild.component';
 import { SubscribeComponent, NgOnChangeComponent } from '../subscribe/subscribe.component';
 import { UpdateviewComponent, ViewSonComponent } from '../updateview/updateview.component';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, LoginRoutingModule],
@@ -27,7 +28,8 @@ import { UpdateviewComponent, ViewSonComponent } from '../updateview/updateview.
     SubscribeComponent,
     NgOnChangeComponent,
     UpdateviewComponent,
-    ViewSonComponent
+    ViewSonComponent,
+    DialogComponent
   ]
 })
 export class LoginModule {}

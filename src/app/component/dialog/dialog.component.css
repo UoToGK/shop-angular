@@ -1,0 +1,110 @@
+/* 系统提示 */
+.cm-msg{
+	position: fixed;
+	z-index: 6000;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+}
+.cm-msg>span{
+	background-color: rgba(0,0,0,0.5);
+	padding: 16px 16px;
+    color: #e4c8c9;
+    float: left;
+
+}
+/* 系统提示 */
+
+.cm-hidden{
+	display: none;
+}
+
+/* 操作提示：点击确定按钮 */
+.mask{
+	position: fixed;
+    z-index: 1200;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+.dialog-container{
+	padding-top: 20px;
+	position: fixed;
+    z-index: 5000;
+    /* width: 80%; */
+    min-width: 300px; 
+    max-width: 300px;;
+    top: 50%;
+    left: 50%;
+    /* 绝对定位居中 */
+    -webkit-transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #999999
+}
+
+.dialog-title>strong{
+	font-weight: 400;
+    font-size: 18px;
+    font-weight: 400;
+}
+.dialog-title{
+    border-bottom:1px solid  #a9a9a9;
+}
+.dialog-title:hover{
+    border-bottom:1px solid #0099ff;
+}
+.dialog-text{
+	margin-top: 8px;
+    padding-bottom: 20px;
+    color: #999999;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow: visible
+}
+
+.dialog-action-one,.dialog-action-two{
+	font-size: 16px;
+	/* border-top: 1px solid #d9d9d9; */
+    background: #fff;
+    padding: 2px;
+}
+.dialog-action-one{
+    color: #0099ff;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.dialog-action-two>div{
+	
+	width: 30%;
+    padding: 5px 0;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #0099ff;
+}
+.dialog-action-two>div:first-child{
+    float: left;
+    margin-left: 10%;
+    border-right: 1px solid #d9d9d9;
+   
+}
+.dialog-action-two>div:nth-child(2){
+    float: right;
+    border-left: 1px solid #d9d9d9;
+ 
+    margin-right: 10%;
+}
+.dialog-action-two>.mobile-dialog-two-cancel{
+
+}
+.dialog-action-two>.mobile-dialog-two-sure{
+
+}

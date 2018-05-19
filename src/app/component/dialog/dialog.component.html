@@ -1,0 +1,17 @@
+<!-- 遮罩层 start-->
+<div v-show="msg" [class]="msg?'mask':'cm-hidden'"></div>
+<!-- 遮罩层end -->
+<!-- 提示框start -->
+<div v-show="msg" [class]="msg?'dialog-container':'cm-hidden'">
+    <div class="dialog-title">
+        <strong>{{title}}</strong>
+    </div>
+    <div class="dialog-text">
+        <span>{{msg}}</span>
+    </div>
+    <div class="dialog-action-two clearfix" >
+        <div class="mobile-dialog-two-cancel" (click)="cancel();msg = false">{{cancelText}}</div>
+        <div class="mobile-dialog-two-sure" (click)="success();msg = false">{{successText}}</div>
+    </div>
+</div>
+<!-- END操作成功 -->
