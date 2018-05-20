@@ -1,5 +1,5 @@
 # ShopAngular
-
+仅作为个人学习使用
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Development server
