@@ -56,14 +56,14 @@ export class SwiperTableComponent implements OnInit {
   }
 
 
-  public touchstartTable(event:Event, item: { startX: any; }) { // 开始拖动
+  public touchstartTable(event:any, item:any) { // 开始拖动
       if (this.setting.needSwipe) {
           this.initState(item);
           item.startX = event.touches[0].pageX;
       }
   }
 
-  public touchmoveTable(event, item) { // 拖动ing
+  public touchmoveTable(event:any, item:any) { // 拖动ing
       if (this.setting.needSwipe) {
           item.swiperState = "touching";
           if (item.startX - event.touches[0].pageX > 15) {
@@ -74,7 +74,7 @@ export class SwiperTableComponent implements OnInit {
       
   }
 
-  public touchendTable(event, item) { // 结束拖动
+  public touchendTable(event:any, item:any) { // 结束拖动
       //console.log(item.moveX);
 
       if (item.moveX < -150) {
@@ -87,7 +87,7 @@ export class SwiperTableComponent implements OnInit {
   /**
    * 单元格单击事件
    */
-  cellclick(cell,row,colSetting){
+  cellclick(cell:any,row:any,colSetting:any){
       if(!row.swiperEdit && this.swiperEditData.length>0){ // 是否已经有正在编辑中的行: 默认为单行编辑
           this.onSwiperEdited.emit(this.swiperEditData[0]);
           // console.log(this.swiperEditData[0]);
@@ -109,7 +109,7 @@ export class SwiperTableComponent implements OnInit {
   /**
    * 单元格双击事件
    */
-  cellclickdblclick(cell){
+  cellclickdblclick(cell:any){
       // console.log('组件')
       // console.log(cell)
   }
@@ -118,9 +118,9 @@ export class SwiperTableComponent implements OnInit {
    * 行单击事件
    * @param row 
    */
-  rowClick(row){
+  rowClick(row:any){
       if(this.setting.selectorMode && this.selected.length==0){ // 当数据回显，且为第一次点击.收集已经回显的数据到选中状态数组
-          this.data.forEach(v => {
+          this.data.forEach( (v:any) => {
               if(v.activite == true){
                   this.selected.push(v);
               }
@@ -155,20 +155,20 @@ export class SwiperTableComponent implements OnInit {
    * 行双击事件
    * @param row 
    */
-  rowDoubleClick(row){
+  rowDoubleClick(row:any){
 
   }
 
   /**
    * 编辑中的input失去焦点事件
    */
-  editInputBlur(row){
+  editInputBlur(row:any){
       this.onSwiperEditBlur.emit(row);
   }
   /**
    * 编辑中的input获取焦点事件
    */
-  editInputFocus(row, event){
+  editInputFocus(row:any, event:any){
       event.stopPropagation();  
       this.onSwiperEditFocus.emit(row);
   }

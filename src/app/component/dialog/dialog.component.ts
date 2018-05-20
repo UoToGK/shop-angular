@@ -14,7 +14,7 @@ export class DialogComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('.button').mousemove(e=>{
+    $('.button').mousemove((e:any)=>{
       console.log('jj')
       const x = e.pageX - e.target.offsetLeft
   
